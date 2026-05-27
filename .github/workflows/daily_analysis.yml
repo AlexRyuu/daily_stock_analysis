@@ -40,7 +40,12 @@ jobs:
       
       - name: 检出代码
         uses: actions/checkout@v5
-      
+
+      - name: Set timezone
+        uses: szenius/set-timezone@v1.2
+        with:
+          timezoneLinux: "Asia/Shanghai"
+    
       - name: 设置 Python 环境
         uses: actions/setup-python@v6
         with:
